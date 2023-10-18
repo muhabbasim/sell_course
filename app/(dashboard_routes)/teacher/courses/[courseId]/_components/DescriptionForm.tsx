@@ -15,13 +15,13 @@ import {
 } from "@/components/ui/form"
 import { useForm } from "react-hook-form"
 import axios from "axios"
-import toast from "react-hot-toast"
 import { Pencil } from "lucide-react"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Textarea } from "@/components/ui/textarea"
 import { Course } from "@prisma/client"
+import { toast } from "sonner"
 
 
 
@@ -88,31 +88,31 @@ export default function DescriptionForm({initialData}: DescriptionFormProps) {
       )}
 
       { isEditing && (
-         <Form {...form}>
+        <Form {...form}>
 
-         <form
-           onSubmit={form.handleSubmit(submitForm)}
-           className="space-y-4 mt-5"
-         >
+          <form
+            onSubmit={form.handleSubmit(submitForm)}
+            className="space-y-4 mt-5"
+          >
 
-           <FormField
-             control={form.control}
-             name="description"
-             render={({ field }) => (
-               <FormItem>
-                 <FormControl>
-                   <Textarea
-                     disabled={isSubmitting}
-                     placeholder="e.g. 'This course is about ...'"
-                     {...field}
-                   />
-                 </FormControl>
-                 <FormDescription>
-                   Choose the course description
-                 </FormDescription>
-                 <FormMessage/> 
-               </FormItem>
-             )}
+            <FormField
+              control={form.control}
+              name="description"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Textarea
+                      disabled={isSubmitting}
+                      placeholder="e.g. 'This course is about ...'"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Choose the course description
+                  </FormDescription>
+                  <FormMessage/> 
+                </FormItem>
+              )}
             />
 
             <div className="flex items-center gap-x-2">
@@ -124,11 +124,13 @@ export default function DescriptionForm({initialData}: DescriptionFormProps) {
               </Button>
             </div>
 
-         </form>
-       </Form>
+          </form>
+        </Form>
       )}
 
     </div>
   )
 }
+
+
 

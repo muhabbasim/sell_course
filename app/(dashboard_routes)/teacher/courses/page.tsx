@@ -1,21 +1,27 @@
-import CourseList from '@/components/CourseList'
-import { Button } from '@/components/ui/button'
 import { db } from '@/lib/prisma_client'
-import Link from 'next/link'
+import { DataTable } from './_components/DataTable'
+import { auth } from '@clerk/nextjs'
+import { redirect } from 'next/navigation'
+import { columns } from './_components/Columns'
 
 export default async function Courses() {
 
-  const courses = await db.course.findMany()
+  
+  const { userId } = auth();
+  if(!userId) return redirect("/")
+  
+  const courses = await db.course.findMany({
+    where: {
+      userId
+    },
+    orderBy: {
+      createdAt: "desc"
+    }
+  })
 
   return (
     <div className='p-6'>
-      <Link href="/teacher/create">
-        <Button variant={'secondary'}>
-          New Course
-        </Button>
-      </Link>
-
-      <CourseList courses={courses} />
+      <DataTable columns={columns} data={courses} />
     </div>
   )
 }

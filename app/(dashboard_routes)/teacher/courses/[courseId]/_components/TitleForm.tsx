@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { useForm } from "react-hook-form"
 import axios from "axios"
-import toast from "react-hot-toast"
+import { toast } from 'sonner';
 import { Pencil } from "lucide-react"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
@@ -31,9 +31,7 @@ interface TitleFormProps {
 }
 
 const formSchema = z.object({
-  title: z.string().min(2, {
-    message: "Title is required",
-  }),
+  title: z.string().min(2)
 })
 
 

@@ -3,7 +3,7 @@
 import * as z from "zod"
 import { Button } from "@/components/ui/button"
 import axios from "axios"
-import toast from "react-hot-toast"
+import { toast } from "sonner"
 import { ImageIcon, Pencil, PlusCircle } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
@@ -67,6 +67,7 @@ export default function ImageForm({initialData}: ImageFormProps) {
             <Image
               alt="Upload"
               fill
+              sizes="100%"
               src={initialData?.imageURL}
               className="object-cover rounded-md"
             />

@@ -31,7 +31,7 @@ const creatorRoutes = [
   },
 ]
 
-export default function SidebarRoutes() {
+export default function zSidebarRoutes() {
 
   const pathname = usePathname();
 
