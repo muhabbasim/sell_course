@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.24.0",
@@ -50,6 +51,7 @@
     "react-icons": "^4.11.0",
     "react-query": "^3.39.3",
     "react-quill": "^2.0.0",
+    "recharts": "^2.9.0",
     "sonner": "^1.0.3",
     "stripe": "^14.0.0",
     "tailwind-merge": "^1.14.0",

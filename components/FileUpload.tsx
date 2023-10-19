@@ -1,7 +1,7 @@
 import { ourFileRouter } from '@/app/api/uploadthing/core';
 import { UploadDropzone } from '@/lib/uploadthing';
 import React from 'react'
-import toast from 'react-hot-toast';
+import { toast } from 'sonner';
 
 interface FileUploadProps {
   onChange: (url?: string) => void

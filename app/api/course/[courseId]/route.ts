@@ -15,7 +15,7 @@ export const PATCH = async (req: Request, { params }: { params: { courseId: stri
   try {
 
     const values = await req.json();
-    const { courseId } = params
+    const { courseId } = params;
     const { userId } = auth();
     
     if(!userId) return new NextResponse("Unutherized", { status: 401 });
