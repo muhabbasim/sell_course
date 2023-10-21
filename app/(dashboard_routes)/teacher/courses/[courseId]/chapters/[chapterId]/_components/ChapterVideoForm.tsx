@@ -36,7 +36,7 @@ export default function ChapterVideoForm({ initialData, chapterId, courseId }: C
     try {
       const res = await axios.patch(`/api/course/${courseId}/chapters/${chapterId}`, values)
       toast.success('Video updated')
-      console.log(res)
+      // console.log(res)
       toggleEdit();
       router.refresh();
       

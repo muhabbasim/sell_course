@@ -15,7 +15,7 @@ interface SidebarItemProps {
 export default function SidebarItem({
   icon: Icon,
   label,
-  href
+  href,
 }: SidebarItemProps) {
 
   const router = useRouter()
@@ -31,6 +31,7 @@ export default function SidebarItem({
   }
 
   return (
+
     <button
       onClick={handleClick}
       type="button"
@@ -57,5 +58,7 @@ export default function SidebarItem({
         )}
       />
     </button>
+   
+
   )
 }

@@ -24,10 +24,10 @@ export default function layout({children} : {
         <div className='h-[80px] md:pl-80 fixed inset-y-0 w-full z-50'>
           <Navbar/>
         </div>
-        <div className='hidden md:flex h-full w-80 flex-col inset-y-0 z-50'>
+        <div className='hidden fixed md:flex h-full w-80 flex-col inset-y-0 z-50'>
           <Sidebar/>
         </div>
-        <main className='h-full pt-[80px] w-full'>
+        <main className='h-full pt-[80px] md:pl-80 w-full'>
           {children}
         </main>
       </div>

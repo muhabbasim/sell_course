@@ -35,7 +35,7 @@ export default function CourseEnrollButton({
       onClick={handlePurchase}
       disabled={isLoading}
       size="sm"
-      className="w-full md:w-auto"
+      className="w-full md:w-auto xl:min-w-[190px]"
     >
       Enroll for {PriceFormat(price)}
     </Button>

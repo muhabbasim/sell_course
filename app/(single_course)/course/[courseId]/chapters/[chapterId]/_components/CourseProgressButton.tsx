@@ -59,7 +59,7 @@ export default function CourseProgressButton({
       disabled={isLoading}
       type="button"
       variant={isCompleted ? "outline" : "success"}
-      className="w-full md:w-auto"
+      className="w-full md:w-auto xl:min-w-[190px]"
     >
       {isCompleted ? "Not completed" : "Mark as complete"}
       <ButtonIcon className="h-4 w-4 ml-2" />

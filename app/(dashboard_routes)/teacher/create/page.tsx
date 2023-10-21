@@ -48,8 +48,6 @@ export default function Create() {
       router.push(`/teacher/courses/${response.data.id}`)
       toast.success("Course created successfully")
       
-      console.log(response)
-      
     } catch (error) {
       toast.error('something went wrong')
     }

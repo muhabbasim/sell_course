@@ -11,7 +11,7 @@ export default function DataCard({ value, label, shouldFormat }: DataCardProps) 
 
   return (
     <Card>
-      <CardHeader className="flex flex-row items-center justify-between space-y-0">
+      <CardHeader className="flex flex-row h-20 items-center justify-between space-y-0">
         <CardTitle className="text-sm font-medium">
           {label}
         </CardTitle>

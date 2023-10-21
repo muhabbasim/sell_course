@@ -3,6 +3,7 @@ import React from 'react'
 import SidebarRoutes from './SidebarRoutes'
 import { Tv2 } from 'lucide-react'
 
+
 export default function Sidebar() {
   return (
     <div className='h-full border-r flex flex-col overflow-y-auto bg-white shadow-sm'>
@@ -11,7 +12,7 @@ export default function Sidebar() {
         <h2 className=' text-sky-700 font-[700]'>Sell Courses</h2>
       </div>
       <div>
-        <SidebarRoutes/>
+        <SidebarRoutes />
       </div>
     </div>
   )

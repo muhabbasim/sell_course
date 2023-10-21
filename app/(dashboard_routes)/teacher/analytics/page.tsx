@@ -16,7 +16,6 @@ export default async function analytics() {
     totalSales
   } = await getAnalytics(userId);
 
-  // console.log(data, totalRevenue, totalSales);
 
   return (
     <div className="p-6">

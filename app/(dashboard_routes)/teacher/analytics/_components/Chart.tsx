@@ -13,7 +13,7 @@ import { XAxis, YAxis, ResponsiveContainer, Bar, BarChart } from 'recharts';
 
 export default function Chart({ data }: ChartProps) {
   return (
-    <Card>
+    <Card className="pt-4">
       <ResponsiveContainer width="100%" height={350}>
         <BarChart data={data}>
           <XAxis

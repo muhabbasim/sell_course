@@ -47,7 +47,7 @@ export const PATCH = async (req: Request, { params }: { params: { courseId: stri
       return new NextResponse("All fields are required", { status: 401 });
     }
 
-    console.log(course)
+    // console.log(course)
 
     const publishedCourse = await db.course.update({
       where: {
