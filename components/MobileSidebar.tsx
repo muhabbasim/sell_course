@@ -16,7 +16,9 @@ export default function MobileSidebar() {
           <Menu/>
         </SheetTrigger>
         <SheetContent side="left" className='w-[300px] p-0'>
-          <Sidebar/>
+          <SheetClose>
+            <Sidebar/>
+          </SheetClose>
         </SheetContent>
       </Sheet>
     </div>
