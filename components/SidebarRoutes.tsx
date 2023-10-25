@@ -39,7 +39,7 @@ export default function SidebarRoutes() {
   const routes = isTeacherMode ? creatorRoutes : guestRoutes
 
   return (
-    <div className='flex flex-col w-full'>
+    <div className='flex flex-col'>
       { routes.map((route) => (
         <SidebarItem
           key={route.href}

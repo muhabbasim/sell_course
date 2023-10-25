@@ -21,10 +21,10 @@ export default function layout({children} : {
   return (
     <QueryClientProvider client={queryClient}>
       <div className='h-full flex'>
-        <div className='h-[80px] md:pl-80 fixed inset-y-0 w-full z-50'>
+        <div className='h-[80px] md:pl-72 fixed inset-y-0 w-full z-50'>
           <Navbar/>
         </div>
-        <div className='hidden fixed md:flex h-full w-80 flex-col inset-y-0 z-50'>
+        <div className='hidden fixed md:flex h-full flex-col inset-y-0 z-50'>
           <Sidebar/>
         </div>
         <main className='h-full pt-[80px] md:pl-80 w-full'>
